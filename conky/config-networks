@@ -1,0 +1,43 @@
+conky.config = { 
+    background = true,
+    border_width = 2,
+    cpu_avg_samples = 4,
+    default_color = '#748bab',
+    double_buffer = true,
+    draw_borders = false,
+    draw_graph_borders = false,
+    draw_outline = false,
+    draw_shades = false,
+    extra_newline = false,
+    font = 'dejaVu Sans Mono:size=10',
+    gap_x = 4,
+    gap_y = 638,
+    net_avg_samples = 2,
+    no_buffers = false,
+    double_buffer = true,
+    out_to_console = false,
+    out_to_ncurses = false,
+    out_to_stderr = false,
+    out_to_x = true,
+    use_xft = true,
+    own_window = true,
+    own_window_transparent= true,
+    own_window_class = 'override',
+    own_window_type = 'override',
+    stippled_borders = 6,
+    update_interval = .5,
+    uppercase = false,
+    use_spacer = 'none',
+    show_graph_scale = true,
+    show_graph_range = true,
+    minimum_height = 40,
+    minimum_width = 250, 
+    maximum_width = 250,
+}
+
+conky.text = [[
+${font bold:size=10}NETWORK ${hr 3}
+Local IPs:${alignr}External IPs:
+${execi 1000 ip a | grep inet | grep -vw lo | grep -v inet6 | cut -d \/ -f1 | sed 's/[^0-9\.]*//g'} ${alignr} ${execi 1000 curl ip.me; echo}UP$alignr${upspeedgraph wlp4s0 20,200 }
+DOWN$alignr${downspeedgraph wlp4s0 20,200 }
+]]

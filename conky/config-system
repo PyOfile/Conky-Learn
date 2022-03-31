@@ -1,0 +1,55 @@
+conky.config = {
+    background = true,
+    border_width = 2,
+    cpu_avg_samples = 4,
+    default_color = '#748bab',
+    double_buffer = true,
+    draw_borders = false,
+    draw_graph_borders = false,
+    draw_outline = false,
+    draw_shades = false,
+    extra_newline = false,
+    font = 'dejaVu Sans Mono:size=10',
+    gap_x = 1140,
+    gap_y = 524,
+    net_avg_samples = 2,
+    no_buffers = false,
+    double_buffer = true,
+    out_to_console = false,
+    out_to_ncurses = false,
+    out_to_stderr = false,
+    out_to_x = true,
+    use_xft = true,
+    own_window = true,
+    own_window_transparent= true,
+    own_window_class = 'override',
+    own_window_type = 'override',
+    stippled_borders = 6,
+    update_interval = .5,
+    uppercase = false,
+    use_spacer = 'none',
+    show_graph_scale = true,
+    show_graph_range = true,
+    minimum_height = 60,
+    minimum_width = 220, 
+    maximum_width = 220,
+}
+
+conky.text = [[
+${font bold:size=10}SYSTEM ${hr 3}${font}
+$sysname $alignc $kernel $alignr $machine
+Uptime $alignr $uptime
+Processes $alignr ${color}$processes / Running:${color}$running_processes
+Freq $alignr $freq_g GHz
+${font bold:size=10}BATTERY ${hr 3} ${font}
+STATUS $alignr ${battery BAT1}
+${battery_bar BAT1}
+${font bold:size=10}MEMORY ${hr 3}${font}
+RAM  $alignc $mem / $memmax $alignr $memperc%
+$membar
+${font bold:size=10}DISK USAGE ${hr 3}${font}
+/    $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /}%
+${fs_bar /}
+/home $alignc ${fs_used /home} / ${fs_size /home} $alignr ${fs_used_perc /home}%
+${fs_bar /home}
+]]
