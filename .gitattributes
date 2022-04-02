@@ -1,1 +1,2 @@
-conky/*.conf linguist-language=lua
+special-vendored-path/* linguist-vendored
+*.lua linguist-vendored=false
