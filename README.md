@@ -12,10 +12,10 @@ git clone https://github.com/PyOfile/Conky-Learn.git && cd Conky-Learn && cp -r 
 ## Add to i3WM config
 ```
 # Conky
-exec --no-startup-id conky -d --config ~/.config/conky/config-nameplate
-exec --no-startup-id conky -d --config ~/.config/conky/config-calender
-exec --no-startup-id conky -d --config ~/.config/conky/config-network
-exec --no-startup-id conky -d --config ~/.config/conky/config-system
+exec --no-startup-id conky -d --config ~/.config/conky/config-nameplate.conf
+exec --no-startup-id conky -d --config ~/.config/conky/config-calender.conf
+exec --no-startup-id conky -d --config ~/.config/conky/config-network.conf
+exec --no-startup-id conky -d --config ~/.config/conky/config-system.conf
 ```
 #
 ![This is an, image of conky](i3-conky-conf.jpg "Conky")
