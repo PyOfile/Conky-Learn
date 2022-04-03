@@ -1,2 +1,2 @@
 special-vendored-path/* linguist-vendored
-*.lua linguist-vendored=false
+*.lua linguist-vendored=true
